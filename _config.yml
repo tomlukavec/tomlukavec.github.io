@@ -9,10 +9,10 @@ permalink: ':title/'
 site-twitter: #if your site has a twitter account, enter it here
 
 # Author Settings
-author: David Freeman # add your name
-author-img: david-freeman.jpg # add your photo
-about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description
-social-twitter: # add your Twitter handle
+author: Tomas Lukavec # add your name
+author-img: fotka.jpg # add your photo
+about-author: I am a Ph.D. Candidate in Public Policy, currently visiting at University of Colorado Denver. # add description
+social-twitter: http://twitter.com/handle # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: artemsheludko # add your Github handle
 social-linkedin: # add your Linkedin handle
