@@ -15,4 +15,6 @@ title: About
 
 If you want to get in touch, you can reach me on LinkedIn or social media profiles. 
 
+<br>
+
 Tom
