@@ -7,7 +7,7 @@ title: About
 
 <br>
 
-<p align="justify">I am a PhD candidate in Public Policy at the Faculty of Social Sciences of Charles University located in Prague, Czech Republic. My research lies in the areas of governance and public administration, exploring the possibilities and limits of the use of various regulatory instruments that are used by governments to achieve intended goals and policy changes. In practical terms, I focus on the areas of public affairs, particularly drug and migration policy. </p>
+<p align="justify">I am a Ph.D. candidate in Public Policy at the Faculty of Social Sciences of Charles University located in Prague, Czech Republic. My research lies in the areas of governance and public administration, exploring the possibilities and limits of the use of various regulatory instruments that are used by governments to achieve intended goals and policy changes. In practical terms, I focus on the areas of public affairs, particularly drug and migration policy. </p>
   
 <p align="justify">I have experience from international environment, studied abroad at the School of Planning, Public Policy and Management of the University of Oregon in the USA, the University of Konstanz in Germany and the Lisbon University Institute in Portugal. And currently I am a Visiting Researcher at the School of Public Affairs, University of Colorado Denver, where my research focuses on the regulation of recreational marijuana. Professionally, I have worked in the public sector as a Program Coordinator at the Ministry of Interior, where I was responsible for the development of strategic documents for the use of EU funds in the areas of border control, visa policy, migration, integration and asylum. I also have experience in the implementation of EU funds within a managing authority and project management of specific projects. </p>
 
@@ -15,6 +15,3 @@ title: About
 
 <p align="justify">If you want to get in touch, you can reach me on LinkedIn or social media profiles. </p>
 
-<br>
-
-<p align="justify">Tom</p>
