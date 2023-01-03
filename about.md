@@ -13,8 +13,8 @@ title: About
 
 <p align="justify">In my spare time, I enjoy all kind of technologies and sports, especially American football and snowboarding. However, I also like to read a good book; apart from academic texts, I particularly like Stephen King's fiction. Music rounds out my interests, I love guitars, especially distorted ones, which I play occasionally, so you can find me most often at metal music shows, but I also listen to rap and electronic music. </p>
 
-If you want to get in touch, you can reach me on LinkedIn or social media profiles. 
+<p align="justify">If you want to get in touch, you can reach me on LinkedIn or social media profiles. </p>
 
 <br>
 
-Tom
+<p align="justify">Tom</p>
