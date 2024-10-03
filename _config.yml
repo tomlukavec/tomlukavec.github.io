@@ -9,9 +9,7 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Tomáš Lukavec # add your name
 author-img: fotka.jpg # add your photo
-about-author: Data Analyst at BI & Ph.D. candidate in Public Policy. 
-<br>
-Personal website & academic blog. # add description
+about-author: Data Analyst at BI & Ph.D. candidate in Public Policy. # add description
 social-twitter: TomLuk739 # add your Twitter handle
 social-instagram: tom.lukavec # add your Facebook handle
 social-linkedin: tomlukavec # add your Linkedin handle
