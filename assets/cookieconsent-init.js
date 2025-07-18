@@ -15,9 +15,7 @@ window.addEventListener('load', function () {
           }
       },
       categories: {
-          necessary: {
-              readOnly: true
-          },
+          necessary: { readOnly: true },
           functionality: {},
           analytics: {},
           marketing: {}
@@ -76,6 +74,16 @@ window.addEventListener('load', function () {
                   }
               }
           }
+      },
+      // -------------------------------
+      // CALLBACK pro odesílání consentu
+      onConsent: function({cookie}) {
+        gtag('consent', 'update', {
+          analytics_storage: cookie.categories.analytics ? 'granted' : 'denied',
+          ad_storage: cookie.categories.marketing ? 'granted' : 'denied'
+          // přidej další kategorie dle potřeby
+        });
       }
+      // -------------------------------
   });
 });
