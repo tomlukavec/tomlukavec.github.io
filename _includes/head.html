@@ -85,6 +85,29 @@
 	<link rel="stylesheet" href="{{ "/assets/fonts/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
 	<!-- Styles -->
 	<link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
+<!-- Orestbida Cookie Consent styles and script -->
+<link rel="stylesheet" href="https://unpkg.com/cookieconsent@3/dist/cookieconsent.css"/>
+<script src="https://unpkg.com/cookieconsent@3/dist/cookieconsent.js"></script>
+<script>
+  window.addEventListener('load', function(){
+    window.cookieconsent.initialise({
+      palette: {
+        popup: { background: "#222" },
+        button: { background: "#f1d600" }
+      },
+      theme: "classic",
+      content: {
+        message: "Tento web používá cookies za účelem analýzy návštěvnosti.",
+        dismiss: "Rozumím",
+        link: "Více informací",
+        href: "/privacy-policy.html"
+      }
+    });
+  });
+</script>
+
+
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
