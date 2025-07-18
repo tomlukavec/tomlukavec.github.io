@@ -77,3 +77,4 @@ CookieConsent.run({
         }
     }
 });
+alert('cookieconsent-init.js načten!');
