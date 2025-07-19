@@ -80,10 +80,17 @@ window.addEventListener('load', function () {
       onConsent: function({cookie}) {
         gtag('consent', 'update', {
           analytics_storage: cookie.categories.analytics ? 'granted' : 'denied',
-          ad_storage: cookie.categories.marketing ? 'granted' : 'denied'
-          // přidej další kategorie dle potřeby
+          ad_storage: cookie.categories.marketing ? 'granted' : 'denied',
+          functionality_storage: cookie.categories.functionality ? 'granted' : 'denied'
+        });
+        // Custom event do dataLayeru pro GTM reportování:
+        window.dataLayer.push({
+          event: 'cookie_consent_update',
+          analytics: !!cookie.categories.analytics,
+          marketing: !!cookie.categories.marketing,
+          functionality: !!cookie.categories.functionality,
+          timestamp: Date.now()
         });
       }
-      // -------------------------------
   });
 });
