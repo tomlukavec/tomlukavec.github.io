@@ -94,5 +94,7 @@ onChange: function({cookie}) {
     marketing: marketingConsent,
     functionality: functionalityConsent,
     timestamp: Date.now()
+      });
+    }
   });
-}
+});
