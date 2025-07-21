@@ -77,20 +77,22 @@ window.addEventListener('load', function () {
       },
       // -------------------------------
       // CALLBACK pro odesílání consentu
-      onConsent: function({cookie}) {
-        gtag('consent', 'update', {
-          analytics_storage: cookie.categories.analytics ? 'granted' : 'denied',
-          ad_storage: cookie.categories.marketing ? 'granted' : 'denied',
-          functionality_storage: cookie.categories.functionality ? 'granted' : 'denied'
-        });
-        // Custom event do dataLayeru pro GTM reportování:
-        window.dataLayer.push({
-          event: 'cookie_consent_update',
-          analytics: !!cookie.categories.analytics,
-          marketing: !!cookie.categories.marketing,
-          functionality: !!cookie.categories.functionality,
-          timestamp: Date.now()
-        });
-      }
+onChange: function({cookie}) {
+  const analyticsConsent = !!cookie.categories.analytics;
+  const marketingConsent = !!cookie.categories.marketing;
+  const functionalityConsent = !!cookie.categories.functionality;
+
+  gtag('consent', 'update', {
+    analytics_storage: analyticsConsent ? 'granted' : 'denied',
+    ad_storage: marketingConsent ? 'granted' : 'denied',
+    functionality_storage: functionalityConsent ? 'granted' : 'denied'
   });
-});
+
+  window.dataLayer.push({
+    event: 'cookie_consent_update',
+    analytics: analyticsConsent,
+    marketing: marketingConsent,
+    functionality: functionalityConsent,
+    timestamp: Date.now()
+  });
+}
