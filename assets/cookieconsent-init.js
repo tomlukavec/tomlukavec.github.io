@@ -4,7 +4,7 @@ CookieConsent.run({
     disablePageInteraction: true,
 
     cookie: {
-        name: 'cc_cookie_666,
+        name: 'cc_cookie_666',
     },
 
     guiOptions: {
