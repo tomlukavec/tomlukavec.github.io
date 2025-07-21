@@ -16,9 +16,9 @@ window.addEventListener('load', function () {
       },
       categories: {
           necessary: { readOnly: true },
-          functionality: {},
-          analytics: {},
-          marketing: {}
+          functionality: { enabled: true },
+          analytics: { enabled: true },
+          marketing: { enabled: true }
       },
       language: {
           default: "en",
