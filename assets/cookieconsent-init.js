@@ -1,100 +1,97 @@
-window.addEventListener('load', function () {
+window.addEventListener("load", function () {
   CookieConsent.run({
-      guiOptions: {
+    guiOptions: {
+      consentModal: {
+        layout: "box",
+        position: "bottom left",
+        equalWeightButtons: true,
+        flipButtons: false
+      },
+      preferencesModal: {
+        layout: "box",
+        position: "right",
+        equalWeightButtons: true,
+        flipButtons: false
+      }
+    },
+
+    categories: {
+      necessary: { readOnly: true },
+      functionality: {},
+      analytics: {},
+      marketing: {}
+    },
+
+    language: {
+      default: "en",
+      autoDetect: "browser",
+      translations: {
+        en: {
           consentModal: {
-              layout: "box",
-              position: "bottom left",
-              equalWeightButtons: true,
-              flipButtons: false
+            title: "Hello visitor, it's cookie time!",
+            description: "We use cookies to improve your experience and analyse our traffic.",
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Reject all",
+            showPreferencesBtn: "Manage preferences",
+            footer: "<a href='/privacy'>Privacy Policy</a>"
           },
           preferencesModal: {
-              layout: "box",
-              position: "right",
-              equalWeightButtons: true,
-              flipButtons: false
-          }
-      },
-      categories: {
-          necessary: { readOnly: true },
-          functionality: {},
-          analytics: {},
-          marketing: {}
-      },
-      language: {
-          default: "en",
-          autoDetect: "browser",
-          translations: {
-              en: {
-                  consentModal: {
-                      title: "Hello visitor, it's cookie time!",
-                      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.",
-                      closeIconLabel: "",
-                      acceptAllBtn: "Accept all",
-                      acceptNecessaryBtn: "Reject all",
-                      showPreferencesBtn: "Manage preferences",
-                      footer: "<a href=\"#link\">Privacy Policy</a>\n<a href=\"#link\">Terms and conditions</a>"
-                  },
-                  preferencesModal: {
-                      title: "Consent Preferences Center",
-                      closeIconLabel: "Close modal",
-                      acceptAllBtn: "Accept all",
-                      acceptNecessaryBtn: "Reject all",
-                      savePreferencesBtn: "Save preferences",
-                      serviceCounterLabel: "Service|Services",
-                      sections: [
-                          {
-                              title: "Cookie Usage",
-                              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-                          },
-                          {
-                              title: "Strictly Necessary Cookies <span class=\"pm__badge\">Always Enabled</span>",
-                              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                              linkedCategory: "necessary"
-                          },
-                          {
-                              title: "Functionality Cookies",
-                              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                              linkedCategory: "functionality"
-                          },
-                          {
-                              title: "Analytics Cookies",
-                              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                              linkedCategory: "analytics"
-                          },
-                          {
-                              title: "Advertisement Cookies",
-                              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                              linkedCategory: "marketing"
-                          },
-                          {
-                              title: "More information",
-                              description: "For any query in relation to my policy on cookies and your choices, please <a class=\"cc__link\" href=\"#yourdomain.com\">contact me</a>."
-                          }
-                      ]
-                  }
+            title: "Consent Preferences",
+            acceptAllBtn: "Accept all",
+            acceptNecessaryBtn: "Reject all",
+            savePreferencesBtn: "Save settings",
+            sections: [
+              {
+                title: "Necessary Cookies <span class='pm__badge'>Always enabled</span>",
+                description: "Required for basic website functionality.",
+                linkedCategory: "necessary"
+              },
+              {
+                title: "Analytics Cookies",
+                description: "Help us improve the website by collecting usage data.",
+                linkedCategory: "analytics"
+              },
+              {
+                title: "Functionality Cookies",
+                description: "Enable advanced features like remembering preferences.",
+                linkedCategory: "functionality"
+              },
+              {
+                title: "Marketing Cookies",
+                description: "Used for personalized advertisements.",
+                linkedCategory: "marketing"
               }
+            ]
           }
-      },
-      // -------------------------------
-      // CALLBACK pro odesílání consentu
-onChange: function({cookie}) {
-  const analyticsConsent = !!cookie.categories.analytics;
-  const marketingConsent = !!cookie.categories.marketing;
-  const functionalityConsent = !!cookie.categories.functionality;
+        }
+      }
+    },
 
-  gtag('consent', 'update', {
-    analytics_storage: analyticsConsent ? 'granted' : 'denied',
-    ad_storage: marketingConsent ? 'granted' : 'denied',
-    functionality_storage: functionalityConsent ? 'granted' : 'denied'
+    // CALLBACKY PRO SOUHLAS
+    onFirstConsent: handleConsentUpdate,
+    onChange: handleConsentUpdate
   });
 
-  window.dataLayer.push({
-    event: 'cookie_consent_update',
-    analytics: analyticsConsent,
-    marketing: marketingConsent,
-    functionality: functionalityConsent,
-    timestamp: Date.now()
-      });
-    }
-  });
+  function handleConsentUpdate({ cookie }) {
+    const analytics     = !!cookie.categories.analytics;
+    const marketing     = !!cookie.categories.marketing;
+    const functionality = !!cookie.categories.functionality;
+
+    // Google Consent Mode update
+    gtag('consent', 'update', {
+      analytics_storage: analytics ? 'granted' : 'denied',
+      ad_storage: marketing ? 'granted' : 'denied',
+      functionality_storage: functionality ? 'granted' : 'denied'
+    });
+
+    // GTM dataLayer push
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'cookie_consent_update',
+      analytics,
+      marketing,
+      functionality,
+      timestamp: Date.now()
+    });
+  }
 });
