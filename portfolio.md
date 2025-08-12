@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Portfolio
+title: About
 ---
 
 <b>My Work</b>  
