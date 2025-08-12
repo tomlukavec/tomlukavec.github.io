@@ -3,7 +3,7 @@ layout: main
 title: Portfolio
 ---
 
-<b>Projects</b>
+<b>Projects  </b>
 
 <br>
 
