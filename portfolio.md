@@ -7,7 +7,7 @@ title: Portfolio
 
 <br>
 
-<p align="justify">This page is currently under construction.</p>
+This page is currently under construction.
 
 <p align="justify"></p>
 
