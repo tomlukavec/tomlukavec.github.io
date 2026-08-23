@@ -7,9 +7,27 @@ title: About
 
 <br>
 
-<p align="justify">I’m a data analyst focused on turning data into actionable insights using tools like BigQuery, Google Analytics, Tableau or Looker. I have a passion for web analytics and user tracking on the internet with experience in both the e-commerce and banking sectors as a BI Data Specialist. As a Ph.D. candidate at Charles University in Prague, I’m applying advanced research methods with practical applications in governance, focusing on regulations and policies. I spent a year of my research in the United States as a visiting scholar and presented at several scientific conferences.</p>
+<p align="justify">I’m a digital data analyst. I’ve worked across three quite different worlds — e-commerce, banking, and now television and the environment of an SVOD streaming platform — and the thing they have in common is that none of them can answer its most important questions without clean measurement underneath. That’s the part I enjoy: making sure the numbers people act on actually mean what they think they mean.</p>
 
-<p align="justify">This website serves to share my research findings and as a portfolio of my work. Here I also test the deployment of measurement tags designed for web analysis.</p>
+<p align="justify">Day to day I work with BigQuery, dbt, Google Analytics, Looker and Tableau, and I like building things end to end — from extraction and data modelling to the dashboard someone finally looks at. What interests me most is the measurement layer itself: <b>user tracking</b>, <b>server-side measurement</b> and <b>identity stitching</b> — the problem of recognising that a person browsing on a phone in the morning and a person watching on a TV set in the evening are the same viewer.</p>
+
+<br>
+
+<b>Education</b>
+
+<br>
+
+<p align="justify">I studied <b>Sociology at Charles University</b> in Prague, which is where I picked up the habit of asking how data came into existence before trusting what it says.</p>
+
+<p align="justify">During my studies I also spent a semester at the <b>University of Oregon</b> and a year at the <b>University of Colorado Denver</b>, at the School of Public Affairs.</p>
+
+<br>
+
+<b>This website</b>
+
+<br>
+
+<p align="justify">This site is a portfolio of my work and a place to write up projects in more detail than a LinkedIn post allows. It’s also where I test the deployment of measurement tags — so if you inspect the page and find something odd, that’s probably the point.</p>
 
 <p align="justify">Let's connect on LinkedIn or check out my social media profiles!</p>
 
