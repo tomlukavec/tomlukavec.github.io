@@ -5,15 +5,13 @@ title: Portfolio
 
 <p align="justify">Selected projects. Each one is written up in more detail in a post — the links go there.</p>
 
-<br>
+<h3 style="margin-top:2.2rem">Značky na přání — Czech vanity licence plates</h3>
 
-<b>Značky na přání — Czech vanity licence plates</b>
+<p style="margin-bottom:1.2rem"><i>Mage.ai · BigQuery · dbt · Streamlit · Python</i></p>
 
 <a href="{{ site.baseurl }}/spz-na-prani/">
   <img src="{{ site.baseurl }}/assets/img/spz-cover.png" alt="Značky na přání" style="width:100%; border-radius:6px;">
 </a>
-
-<p align="justify"><i>Mage.ai · BigQuery · dbt · Streamlit · Python</i></p>
 
 <p align="justify">An end-to-end data project on the Czech Ministry of Transport open dataset of personalised licence plates — 54 392 plates registered since 2016. Mage.ai extracts the source CSV into a raw layer in BigQuery, dbt builds a typed staging layer and a deduplicated marts view on top of it (medallion architecture), and a Streamlit app with eleven pages presents it.</p>
 
