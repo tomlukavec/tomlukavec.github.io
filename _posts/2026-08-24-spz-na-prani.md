@@ -4,7 +4,7 @@ title: "Značky na přání: co si Češi píšou na auta"
 date: 2026-08-24 00:00:00 +0200
 description: End-to-end datový projekt nad otevřenými daty Ministerstva dopravy — Mage.ai, BigQuery, dbt a Streamlit. A 54 392 nápadů, které si Češi za deset let objednali na tabulku.
 img: spz-cover.png
-fig-caption: Šest značek z registru, každá s vlastní historkou
+fig-caption: Modrý pruh EU — jediná část tabulky, kterou si objednat nelze
 tags: [Portfolio, Data Engineering, dbt, BigQuery, Streamlit, Open Data]
 ---
 
