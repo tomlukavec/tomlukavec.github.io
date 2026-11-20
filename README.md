@@ -1,31 +1,16 @@
-# Flexible-Jekyll is a simple and clean theme for Jekyll
+# tomlukavec.github.io
 
-![](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/promo-img.jpg?raw=true)
+Personal website and blog of Tomáš Lukavec, published at https://tomlukavec.github.io.
 
-## Demo
+Built with Jekyll on GitHub Pages, based on the [Flexible-Jekyll](https://github.com/artemsheludko/flexible-jekyll) theme by Artem Sheludko (GPL-3.0, see `LICENSE`).
 
-Check the theme in action [Demo](https://artemsheludko.github.io/flexible-jekyll/)
+## Local preview
 
-The main page would look like this:
+```sh
+bundle install
+bundle exec jekyll serve
+```
 
-![Main page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/home-page.jpg?raw=true)
+## Measurement
 
-The post page would look like this:
-
-![Post page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/post-example.jpg?raw=true)
-
-## Features
-
-- [Google Fonts](https://fonts.google.com/)
-- [Font Awesome](http://fontawesome.io/)
-- [Disqus](https://disqus.com/)
-- [Analytics](https://analytics.google.com/analytics/web/)
-- Support Emoji
-
-## Installation:
-
-Fork the ``master`` branch and follow the [Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/).
-
-## License
-
-GNU General Public License v3.0
+Google Tag Manager (`gtm_id` in `_config.yml`) loads the Cookiebot CMP with Google Consent Mode and the GA4 tags. The site itself contains no other tracking code.
