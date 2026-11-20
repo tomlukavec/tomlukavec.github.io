@@ -12,36 +12,26 @@ layout: default
       <p>{{site.about-author}}</p>
     </div>
     <nav class="navigation">
-        <p style="text-align: center"><a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" <a href="https://tomlukavec.github.io">Blog</a></p>
-      </li></ul>
-        <p style="text-align: center"><a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" <a href="{{ site.baseurl }}/about">About</a></p>
-    </li></nav>
-        <p style="text-align: center"><a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" <a href="{{ site.baseurl }}/portfolio">Portfolio</a></p>
-    </li></nav>
+      <p style="text-align: center"><a href="{{ site.baseurl }}/">Blog</a></p>
+      <p style="text-align: center"><a href="{{ site.baseurl }}/about/">About</a></p>
+      <p style="text-align: center"><a href="{{ site.baseurl }}/portfolio/">Portfolio</a></p>
+    </nav>
   </header> <!-- End Header -->
    <footer>
     <section class="contact">
       <h3 class="contact-title">Contact me</h3>
       <ul>
         {% if site.social-twitter %}
-          <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        {% else %}
-          <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        {% endif %}      
+          <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        {% endif %}
         {% if site.social-instagram %}
-          <li class="instagram"><a href="https://www.instagram.com/{{site.social-instagram}}" target="_blank"><i class="fa fa-instagram"></i></a></li>
-        {% else %}
-          <li class="instagram"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li class="instagram"><a href="https://www.instagram.com/{{ site.social-instagram }}" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-linkedin %}
-          <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a></li>
-        {% else %}
-          <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+          <li class="linkedin"><a href="https://www.linkedin.com/in/{{ site.social-linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-email %}
-          <li class="email"><a href="mailto:{{site.social-email}}"><i class="fa fa-envelope-o"></i></a></li>
-        {% else %}
-          <li class="email"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+          <li class="email"><a href="mailto:{{ site.social-email }}" aria-label="E-mail"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         {% endif %}
       </ul>
     </section> <!-- End Section Contact -->
