@@ -30,10 +30,16 @@ layout: default
         {% if site.social-linkedin %}
           <li class="linkedin"><a href="https://www.linkedin.com/in/{{ site.social-linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         {% endif %}
-        {% if site.social-email %}
-          <li class="email"><a href="mailto:{{ site.social-email }}" aria-label="E-mail"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
+        {% if site.social-email-user and site.social-email-domain %}
+          <li class="email"><a class="js-mail" href="#" data-u="{{ site.social-email-user }}" data-d="{{ site.social-email-domain }}" aria-label="E-mail"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
         {% endif %}
       </ul>
+      <script>
+        // Assemble mailto links in the browser so the full address is not in the HTML source
+        document.querySelectorAll('a.js-mail').forEach(function (a) {
+          a.href = 'mailto:' + a.getAttribute('data-u') + '@' + a.getAttribute('data-d');
+        });
+      </script>
     </section> <!-- End Section Contact -->
     <div class="copyright">
       <p>{{site.time | date: '%Y'}} &copy; {{site.author}}</p>
