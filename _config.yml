@@ -13,7 +13,9 @@ about-author: Digital Data Analyst
 social-twitter: TomLuk739
 social-instagram: tom.lukavec
 social-linkedin: tomlukavec
-social-email: tom.lukavec{AT}icloud.com
+# E-mail is split so the full address never appears in the HTML; JS assembles the mailto link in the browser
+social-email-user: tom.lukavec
+social-email-domain: icloud.com
 
 # Measurement (GTM loads Cookiebot CMP and GA4)
 gtm_id: GTM-WXMFMXT
